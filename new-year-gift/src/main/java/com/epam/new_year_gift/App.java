@@ -15,7 +15,8 @@ public class App
     
     public static void main( String[] args )
     {
-         Scanner s=new Scanner(System.in);
+         @SuppressWarnings("resource")
+		Scanner s=new Scanner(System.in);
         System.out.println("Enter how many sweets to add in gift= ");
     int h1=s.nextInt();
     int sw[]=new int[h1];
@@ -32,8 +33,7 @@ public class App
     for(int i=0;i<h3;i++)
         ca[i]=s.nextInt();
         Sweets s1=new Sweets();
-        Sweets s2=new Sweets();
-        Sweets s3=new Sweets();
+        
         Chocolates c1=new Chocolates();
         Candies cd1=new Candies();
         int ar1[]=s1.noofsweet(sw);
@@ -136,6 +136,7 @@ public class App
             System.out.print(ar2[i]+" ");
         }   
         }}
+        System.out.println();
         System.out.println("Total Weight in gift= "+(ar1.length+ar2.length+ar3.length));
         int ar4[]=c1.sortchoco(ar2);
         System.out.print("Chocolates in sorted order=");
@@ -178,7 +179,7 @@ class Chocolates extends App{
     return c;
 	}
 }
-class Candies extends App3
+class Candies extends App
 {
     
 	public int[] noofcan(int ca[]) {
