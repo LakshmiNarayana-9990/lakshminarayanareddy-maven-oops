@@ -10,11 +10,20 @@ package com.epam.new_year_gift;
  *
  */
  import java.util.*;
-public class App 
+ interface in{
+	 void msg();
+ }
+public class App implements in
 {
-    
+	public void msg() {
+		System.out.println("First Project");
+	}
     public static void main( String[] args )
     {
+    	
+    	
+    	App a=new App();
+    	a.msg();
          @SuppressWarnings("resource")
 		Scanner s=new Scanner(System.in);
         System.out.println("Enter how many sweets to add in gift= ");
